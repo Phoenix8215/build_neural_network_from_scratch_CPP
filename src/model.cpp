@@ -11,9 +11,22 @@ Model::Model(int inputnodes, int hiddennodes, int outputnodes, float learningrat
         double stddev2 = std::pow(hnodes, -0.5);
 
         // 初始化权重
-        wih = initialWeight(hnodes, inodes, 0.0, stddev1);
+        auto wih_opt = initialWeight(hnodes, inodes, 0.0, stddev1);
+        if (wih_opt.has_value()) {
+            wih = wih_opt.value();
+        } else {
+            throw std::runtime_error("Failed to initialize wih");
+        }
         printMatrixDimensions("wih", wih);
-        who = initialWeight(onodes, hnodes, 0.0, stddev2);
+
+        // ###############################################################
+        
+        auto who_opt = initialWeight(onodes, hnodes, 0.0, stddev2);
+        if (who_opt.has_value()) {
+            who = who_opt.value();
+        } else {
+            throw std::runtime_error("Failed to initialize who");
+        }
         printMatrixDimensions("who", who);
     }
 
