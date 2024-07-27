@@ -80,6 +80,6 @@ Eigen::MatrixXd Model::sigmoid(const Eigen::MatrixXd& x) {
     return 1.0 / (1.0 + (-x.array()).exp());
 }
 
-Eigen::MatrixXd de_sigmoid(const Eigen::MatrixXd& x) {
-    return x.array() * (1.0 - x.array()); 
+Eigen::MatrixXd Model::de_sigmoid(const Eigen::MatrixXd& x) {
+    return x.array() * (1.0 - x.array());
 }

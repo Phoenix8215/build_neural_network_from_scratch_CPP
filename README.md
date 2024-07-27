@@ -3,7 +3,7 @@
 ## Project Overview
 Created a simple neural network using C++17 standard and the Eigen library that supports both forward and backward propagation.
 
-By using only the sigmoid function as the activation function, the backpropagation process is very simple, making it a perfect case for beginners in deep learning.
+By using only the sigmoid function as the activation function, the backpropagation process is very simple. With just a three-layer neural network structure consisting of an input layer, a hidden layer, and an output layer, this is a perfect case for beginners in deep learning.
 
 The program's output is as follows:
 ![results](assets/results.jpg)

@@ -39,7 +39,7 @@ int main() {
 
     float learning_rate = 0.1;
     Model model(input_nodes, hidden_nodes, output_nodes, learning_rate);
-    int epochs = 100;
+    int epochs = 1000;
 
     for (int e = 0; e < epochs; ++e) {
         for (const std::string& record : training_data_list) {
