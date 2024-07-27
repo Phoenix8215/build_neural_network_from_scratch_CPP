@@ -68,5 +68,5 @@ Eigen::MatrixXd Model::sigmoid(const Eigen::MatrixXd& x) {
 }
 
 Eigen::MatrixXd de_sigmoid(const Eigen::MatrixXd& x) {
-    return x.array() * (1.0 - x.array()); // x是已经经过sigmoid的输出
+    return x.array() * (1.0 - x.array()); 
 }
